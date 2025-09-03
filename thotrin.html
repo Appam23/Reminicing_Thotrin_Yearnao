@@ -9,65 +9,69 @@
 		body {
 			font-family: 'Georgia', serif;
 			background: linear-gradient(135deg, #fbeec1 0%, #a7c7e7 100%);
-			<style>
-				body {
-					font-family: 'Georgia', serif;
-					background: linear-gradient(135deg, #fbeec1 0%, #a7c7e7 100%);
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-					min-height: 100vh;
-					margin: 0;
-					padding: 0 12px;
-				}
-				h1 {
-					color: #6b4226;
-					margin-bottom: 24px;
-					text-shadow: 1px 2px 8px #fff6e0;
-					text-align: center;
-					max-width: 95vw;
-				}
-				.gallery-btn {
-					padding: 12px 28px;
-					font-size: 1.1rem;
-					background: #b68973;
-					color: #fffbe6;
-					border: none;
-					border-radius: 8px;
-					cursor: pointer;
-					box-shadow: 0 2px 8px #e2c79988;
-					transition: background 0.2s, box-shadow 0.2s;
-					margin-bottom: 8px;
-					max-width: 95vw;
-					word-break: break-word;
-				}
-				.gallery-btn:hover {
-					background: #a47149;
-					box-shadow: 0 4px 16px #e2c799cc;
-				}
-				@media (max-width: 600px) {
-					body {
-						padding: 0 4vw;
-					}
-					h1 {
-						font-size: 1.3rem;
-						margin-bottom: 16px;
-					}
-					.gallery-btn {
-						font-size: 1rem;
-						padding: 10px 8vw;
-						margin-bottom: 10px;
-					}
-				}
-			</style>
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			min-height: 100vh;
+			margin: 0;
+			padding: 0 12px;
+		}
+		h1 {
+			color: #6b4226;
+			margin-bottom: 24px;
+			text-shadow: 1px 2px 8px #fff6e0;
+			text-align: center;
+			max-width: 95vw;
+		}
+		.gallery-btn {
+			padding: 12px 28px;
+			font-size: 1.1rem;
+			background: #b68973;
+			color: #fffbe6;
+			border: none;
+			border-radius: 8px;
+			cursor: pointer;
+			box-shadow: 0 2px 8px #e2c79988;
+			transition: background 0.2s, box-shadow 0.2s;
+			margin-bottom: 8px;
+			max-width: 95vw;
+			word-break: break-word;
+		}
+		.gallery-btn:hover {
+			background: #a47149;
+			box-shadow: 0 4px 16px #e2c799cc;
+		}
+		.welcome-img {
+			max-width: 90vw;
+			height: auto;
+			margin-bottom: 18px;
+			border-radius: 10px;
+			box-shadow: 0 2px 8px #e2c79988;
+		}
+		@media (max-width: 600px) {
+			body {
+				padding: 0 2vw;
+			}
+			h1 {
+				font-size: 1.1rem;
+				margin-bottom: 12px;
+			}
+			.gallery-btn {
+				font-size: 0.95rem;
+				padding: 8px 4vw;
+				margin-bottom: 8px;
+			}
+			.welcome-img {
+				max-width: 98vw;
+				margin-bottom: 12px;
+			}
 		}
 	</style>
 </head>
 <body>
 	<h1>Welcome to Thotrin Yearnao Lamlangate</h1>
-    <img src="picnic_pics/img6.jpg" alt="Picnic 1">
-    <br>
+	<img src="picnic_pics/img6.jpg" alt="Picnic 1" class="welcome-img">
 	<button class="gallery-btn" onclick="window.location.href='all_pictures.html'">Go to Picture Gallery</button>
 
 </body>
