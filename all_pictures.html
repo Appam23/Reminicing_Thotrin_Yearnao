@@ -114,7 +114,7 @@ async function renderGallery() {
         const img = document.createElement('img');
         img.src = imgObj.src;
         img.alt = imgObj.alt;
-        img.addEventListener('click', enlargeImage);
+        img.addEventListener('click', openModal);
         container.appendChild(img);
         gallery.appendChild(container);
     });
@@ -128,7 +128,7 @@ async function renderGallery() {
             const img = document.createElement('img');
             img.src = 'http://localhost:3001' + imgObj.url;
             img.alt = imgObj.filename;
-            img.addEventListener('click', enlargeImage);
+            img.addEventListener('click', openModal);
             // Add delete button for uploaded images
             const delBtn = document.createElement('button');
             delBtn.className = 'delete-btn';
@@ -189,23 +189,21 @@ document.getElementById('uploadInput').addEventListener('change', async function
     event.target.value = '';
 });
 
-// Enlarge image in modal
-function enlargeImage(event) {
+// Modal logic for fullscreen image
+function openModal(event) {
     const modal = document.getElementById('imgModal');
     const modalImg = document.getElementById('modalImg');
     modalImg.src = this.src;
     modal.classList.add('active');
 }
 
-// Attach enlarge event to all images (handled in renderGallery)
-
-// Close modal when clicking outside image or on close button
 function closeModal(event) {
     if (event.target.id === 'imgModal' || event.target.id === 'modalCloseBtn') {
         document.getElementById('imgModal').classList.remove('active');
         document.getElementById('modalImg').src = '';
     }
 }
+
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('modalCloseBtn').addEventListener('click', closeModal);
     renderGallery();
