@@ -1,101 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Thotrin Yernao Lamlangate</title>
-	<style>
-		body {
-			font-family: 'Georgia', serif;
-			background: linear-gradient(135deg, #fbeec1 0%, #a7c7e7 100%);
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			min-height: 100vh;
-			margin: 0;
-			padding: 20px;
-			box-sizing: border-box;
-			text-align: center;
-			overflow-x: hidden;
-		}
-		h1 {
-			color: #6b4226;
-			margin-bottom: 24px;
-			text-shadow: 1px 2px 8px #fff6e0;
-			font-size: 2rem;
-			animation: fadeIn 1s ease-out;
-		}
-		.img-container {
-			margin: 12px 0;
-			border-radius: 10px;
-			box-shadow: 0 2px 8px #e2c79988;
-			width: 100%;
-			max-width: 400px;
-			overflow: hidden;
-			animation: slideIn 1s ease-out 0.3s forwards;
-			opacity: 0; /* will fade in with animation */
-		}
-		.img-container img {
-			width: 100%;
-			height: auto;
-			border-radius: 10px;
-			transition: transform 0.3s ease, box-shadow 0.3s ease;
-		}
-		.img-container img:hover {
-			transform: scale(1.05);
-			box-shadow: 0 6px 18px #e2c799cc;
-		}
-		.gallery-btn {
-			padding: 14px 28px;
-			font-size: 1.1rem;
-			background: #b68973;
-			color: #fffbe6;
-			border: none;
-			border-radius: 8px;
-			cursor: pointer;
-			box-shadow: 0 2px 8px #e2c79988;
-			transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
-			margin-top: 20px;
-			animation: fadeIn 1s ease-out 0.6s forwards;
-			opacity: 0;
-		}
-		.gallery-btn:hover {
-			background: #a47149;
-			box-shadow: 0 4px 16px #e2c799cc;
-			transform: scale(1.05);
-		}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thotrin Yernao Lamlangate</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Georgia', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fffbe6;
+  }
 
-		/* Animations */
-		@keyframes fadeIn {
-			from { opacity: 0; transform: translateY(20px); }
-			to { opacity: 1; transform: translateY(0); }
-		}
-		@keyframes slideIn {
-			from { opacity: 0; transform: translateY(30px); }
-			to { opacity: 1; transform: translateY(0); }
-		}
+  /* Full-page background image */
+  body {
+    background: url('pics/img5.jpg') no-repeat center center fixed;
+    background-size: cover; /* fills entire viewport */
+    background-position: center;
+  }
 
-		/* Responsive adjustments */
-		@media (max-width: 500px) {
-			h1 {
-				font-size: 1.5rem;
-				margin-bottom: 16px;
-			}
-			.gallery-btn {
-				padding: 12px 20px;
-				font-size: 1rem;
-			}
-		}
-	</style>
+  h1 {
+    margin-bottom: 24px;
+    font-size: 2rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+  }
+
+  .img-container {
+    margin: 12px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+  }
+  .img-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .img-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.7);
+  }
+
+  .gallery-btn {
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    background: rgba(182,137,115,0.85);
+    color: #fffbe6;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    margin-top: 20px;
+  }
+  .gallery-btn:hover {
+    background: rgba(164,113,73,0.85);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.7);
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 500px) {
+    h1 { font-size: 1.5rem; margin-bottom: 16px; }
+    .gallery-btn { padding: 12px 20px; font-size: 1rem; }
+  }
+</style>
 </head>
 <body>
-	<h1>Welcome to Thotrin Yernao Lamlangate</h1>
 
-	<div class="img-container">
-		<img src="pics/img6.jpg" alt="Picnic 1">
-	</div>
+<h1>Welcome to Thotrin Yernao Lamlangate</h1>
 
-	<button class="gallery-btn" onclick="window.location.href='all_pictures.html'">Go to Picture Gallery</button>
+<div class="img-container">
+  <img src="pics/img6.jpg" alt="Picnic 1">
+</div>
+
+<button class="gallery-btn" onclick="window.location.href='all_pictures.html'">
+  Go to Picture Gallery
+</button>
+
 </body>
 </html>

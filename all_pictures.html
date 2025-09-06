@@ -102,24 +102,22 @@
         font-size: 2rem;
       }
     }
-  #backBtn {
-  position: fixed;
-  bottom: 15px;   /* move to bottom */
-  right: 15px;    /* move to right */
-  font-size: 1rem;
-  padding: 8px 16px;
-  background: #e5d818;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  cursor: pointer;
-  z-index: 1100;
-}
-#backBtn:hover {
-  background: #555;
-}
-
-
+    #backBtn {
+      position: fixed;
+      bottom: 15px;
+      right: 15px;
+      font-size: 1rem;
+      padding: 8px 16px;
+      background: #e5d818;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      cursor: pointer;
+      z-index: 1100;
+    }
+    #backBtn:hover {
+      background: #555;
+    }
   </style>
 </head>
 <body>
@@ -134,11 +132,15 @@
   </div>
 
   <script>
-    const totalImages = 27; // how many images you have
-    const imageList = [];
-    for (let i = 1; i <= totalImages; i++) {
-      imageList.push(`img${i}.jpg`); // adjust extension if needed
-    }
+    // Explicit list of your images
+    const imageList = [
+      "img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg", "img5.jpg",
+      "img6.jpg", "img7.jpg", "img8.jpg", "img9.jpg", "img10.jpg",
+      "img11.jpg", "img12.jpg", "img13.jpg", "img14.jpg", "img15.jpg",
+      "img16.jpg", "img17.jpg", "img18.jpg", "img19.jpg", "img20.jpg",
+      "img21.jpg", "img22.jpg", "img23.jpg", "img24.jpg", "img25.jpg",
+      "img26.jpg", "img27.jpg"
+    ];
 
     const gallery = document.getElementById("gallery");
     const overlay = document.getElementById("overlay");
@@ -212,7 +214,7 @@
     });
   </script>
   <!-- Back button -->
-<a href="index.html" id="backBtn">⬅ Back</a>
+  <a href="index.html" id="backBtn">⬅ Back</a>
 
 </body>
 </html>
